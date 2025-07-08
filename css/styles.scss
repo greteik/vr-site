@@ -1,0 +1,48 @@
+@mixin SectionTitle {
+    font-weight: 600;
+    font-size: 68px;
+    color: #EB8382;
+    padding-top: 30px;
+}
+
+@mixin mainText {
+    color: #826F8C;
+    max-width: 518px;
+    padding: 25px 0;
+}
+
+@mixin mainButon {
+    background: linear-gradient(137deg, #4499d9 3%, #7367be 100%);
+    padding: 13px 14px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #FFE6D7;
+    font-size: 18px;
+    font-weight: 500;
+    color: #446381;
+}
+
+.container {
+    max-width: 1240px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 50px 0;
+}
+
+.menu__list {
+    display: flex;
+    gap: 0 50px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu__button {
+    @include mainButon()
+}

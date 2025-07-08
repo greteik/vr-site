@@ -1,0 +1,37 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #FFE6D7;
+  font-size: 18px;
+  font-weight: 500;
+  color: #446381;
+}
+
+.container {
+  max-width: 1240px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 50px 0;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__button {
+  background: linear-gradient(137deg, #4499d9 3%, #7367be 100%);
+  padding: 13px 14px;
+  border-radius: 25px;
+  color: #fff;
+}

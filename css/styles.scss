@@ -9,6 +9,7 @@
     color: #826F8C;
     max-width: 518px;
     padding: 25px 0;
+    line-height: 29px;
 }
 
 @mixin mainButon {
@@ -16,6 +17,14 @@
     padding: 13px 14px;
     border-radius: 25px;
     color: #fff;
+    cursor: pointer;
+}
+
+@mixin mainSubtitle {
+    font-size: 23px;
+    color: #446381;
+    font-weight: 500;
+    margin-bottom: 25px;
 }
 
 body {
@@ -43,6 +52,262 @@ body {
     align-items: center;
 }
 
+.menu__list-link {
+    transition: 0.3s ease-in;
+}
+
+.menu__list-link:hover {
+    color: #EB8382;
+}
+
 .menu__button {
     @include mainButon()
+}
+
+.banner {
+    padding-bottom: 150px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        margin-right: 100px;
+    }
+
+    &__subtitle {
+        @include mainSubtitle()
+    }
+
+    &__subtitle::after {
+        content: url('../images/banner-arrow.svg');
+        margin-left: 30px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 68px;
+        max-width: 471px;
+    }
+
+    &__title span {
+        @include SectionTitle()
+    }
+
+    &__text {
+        @include mainText()
+    }
+
+    &__btn {
+        @include mainButon()
+    }
+
+    &__close {
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    &__dots-img {
+        position: absolute;
+        top: 50%;
+        right: 7%;
+    }
+}
+
+.about {
+    margin-bottom: 150px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__item {
+        margin-left: 50px;
+        position: relative;
+    }
+
+    &__item::after {
+        content: url(../images/VR.svg);
+        position: absolute;
+        top: 64%;
+        right: 20%;
+    }
+
+    &__subtitle {
+        @include mainSubtitle()
+    }
+
+    &__title {
+        @include SectionTitle()
+    }
+
+    &__text {
+        @include mainText()
+    }
+
+    &__btn {
+        @include mainButon();
+    }
+}
+
+.game {
+    margin-bottom: 150px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 40px;
+        position: relative;
+    }
+
+    &__subtitle {
+        @include mainSubtitle()
+    }
+
+    &__title {
+        @include SectionTitle()
+    }
+
+    &__text {
+        @include mainText()
+    }
+
+    &__text::after {
+        content: url(../images/game-dots.svg);
+        position: absolute;
+        top: 77%;
+        left: 37%;
+        cursor: pointer;
+    }
+
+    &__button {
+        @include mainButon()
+    }
+}
+
+.plan {
+    margin-bottom: 100px;
+
+    &__subtitle {
+        @include mainSubtitle();
+        text-align: center
+    }
+
+    &__title {
+        @include SectionTitle();
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 0 40px;
+        justify-content: center;
+    }
+
+    &__item {
+        background-color: #FBDACF;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px 0 rgba(132, 148, 205, 0.08);
+        cursor: pointer;
+        transition: transform 0.2s ease-in;
+        padding-right: 60px;
+        position: relative;
+    }
+
+     &__item:hover{
+        background: linear-gradient(180deg, #446381 0%, #826f8c 100%);
+        background-color: #09143C;
+        transform: translateY(-5%);
+     }
+
+     &__item:hover &__list-text {
+        color: #fff;
+     }
+
+     &__item:hover &__item-title {
+        color: #fff;
+     }
+
+     &__item:hover::after {
+        content: url(../images/badge.svg);
+        position: absolute;
+        top: 4%;
+        left: 82%;
+     }
+
+     &__item:hover::before {
+        content: url(../images/plan-img.svg);
+        position: absolute;
+        top: 66%;
+     }
+
+     &__item-title {
+        font-size: 32px;
+        font-weight: 600;
+        padding: 30px 0;
+        margin-left: 45px;
+     }
+
+     &__price {
+        font-size: 50px;
+        font-weight: 700;
+        color: #EB8382;
+        margin-bottom: 30px;
+        margin-left: 45px;
+     }
+
+     &__price span {
+        font-size: 18px;
+     }
+
+     &__list {
+        margin-left: 45px;
+        margin-bottom: 45px;
+     }
+
+     &__list-text {
+        padding-top: 15px;
+        color: #826F8C
+     }
+
+     &__list-text::before {
+        content: url(../images/plan-calc.svg);
+        margin-right: 13px;
+     }
+
+     &__btn {
+        @include mainButon();
+        margin-left: 47px;
+        margin-bottom: 47px;
+        padding-right: 80px;
+        padding-left: 60px;
+     }
+}
+
+.footer {
+
+    hr {
+       height: 1.5px;
+       background-color: #816F8C;
+       opacity: .5;
+    }
+    &__items {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__copy {
+        font-size: 16px;
+        color: #826F8C;
+    }
 }
